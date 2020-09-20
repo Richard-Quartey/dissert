@@ -1,0 +1,234 @@
+body {
+  font-family: "Montserrat";
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Things like font size, line height should be applied to specific class and not to html elements like h1, h2 body, p  */
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* h1, h2, h3, h4, h5, h6{
+  font-family: "Montserrat-Bold";
+} */
+h4 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.0rem;
+  line-height: 1.5;
+  /* padding: 50px; */
+  padding-top: 30px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* You may have to change this a tag to something else later */
+a {
+  color: #214c3c;
+  /* color: #000; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  padding: 0px 1%;
+  text-decoration: none;
+}
+
+a:hover {
+  color: silver;
+}
+
+#title {
+  /* color: #fff; */
+  background-image: url("https://images.pexels.com/photos/3903949/pexels-photo-3903949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  text-align: center;
+}
+
+.container-fluid {
+  padding: 1% 5% 4%;
+}
+
+.btn {
+  text-align: left;
+}
+
+.navbar {
+  padding: 0 0 1rem;
+  text-align: left;
+}
+
+.nav-item {
+  padding: 0 1px;
+}
+
+.nav-link {
+  font-size: 1.0rem;
+  font-family: "Montserrat";
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+/* Download Buttons */
+.download-button {
+  margin: 0.5% 0.2% 0 0;
+}
+
+/* Title image */
+/* .title-image {
+  width: 60%;
+  transform: rotate (25deg);
+  z-index: -1;
+  position: absolute;
+} */
+/* Features Section */
+#features {
+  padding: 7% 15%;
+  background-color: #fff;
+  /* position: relative;
+  z-index: 1; */
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.icon {
+  color: #99b898;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #214c3c;
+}
+
+/* Testimonial Section */
+#testimonials {
+  text-align: center;
+  background-color: #184d47;
+  color: #fff;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 5% 15%;
+}
+
+#press {
+  background-color: #184d47;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 10%;
+  margin: 10px 20px 30px;
+}
+
+/* Pricing Section */
+#pricing {
+  padding: 100px;
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section */
+#cta {
+  /* background-color: silver; */
+  /* background-color: #f5f5f5; */
+  background-color: #dee3e2;
+  margin-top: 1%;
+  padding: 5% 5%;
+  /* line-height: 3; */
+}
+
+.cta-download {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat";
+  /* padding: 5% 15%; */
+}
+
+.bottom-container {
+  /* background-color: #EAF6F6; */
+  padding: 50px 0 20px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.cyberXploit {
+  text-decoration: underline;
+  color: #214c3c;
+}
+
+.copyright {
+  color: #214c3c;
+  /* font-size: 0.75rem; */
+  padding: 20px 0;
+}
+
+.download-msg {
+  /* color: #214c3c; */
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.0rem;
+  line-height: 2;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 214.63px;
+  /* height: 15rem; */
+  object-fit: cover;
+}
+
+.basket-button {
+  text-align: center;
+}
+
+.spec-names {
+  margin-top: 4%;
+}
+
+.download-button {
+  /* color: #214c3c; */
+  color: #000;
+  font-weight: bold;
+}
+
+.button-learnmore {
+  color: #fff;
+}
+
+/* Media Query Breakpoints for website  responsiveness on different viewports*/
+/* @media (max-width: 1028px) {
+The title text-align: center has already been taken care of separately at the top
+  #title {
+    text-align: center;
+  }
+
+  .title-images {
+    position: static;
+    transform: rotate(0):
+  }
+} */

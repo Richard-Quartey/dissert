@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/signin.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <body data-gr-c-s-loaded="true">
+    <!--3. form is submitted to the below route /auth/signup  via POST method-->
+    <!-- <form action="/auth/signup" class="form-signin" method="POST"> -->
+    <form action="/auth/signup" class="form-signin" method="POST">
+
+      <div class="text-center mb-4">
+        <img class="mb-4" src="/images/cyberXploit.png" alt="" width="200" height="200">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+        <!-- <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p> -->
+      </div>
+      <div class="form-label-group">
+        <input type="text" id="name" class="form-control" name="name" placeholder="Full Name" required="" autofocus="">
+        <label for="name">Username</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" id="email" class="form-control" name="email" placeholder="Email address" required="" autofocus="">
+        <label for="email">Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" id="password" class="form-control" name="password" placeholder="Password" required="">
+        <label for="password">Password</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" id="rpassword" class="form-control" name="rpassword" placeholder="Confirm Password" required="">
+        <label for="rpassword">Confirm Password</label>
+      </div>
+
+
+ <!-- <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> I agree to all the terms and conditions.
+        </label>
+      </div> -->
+	  <button class="btn btn-lg btn-block btn-outline-dark btn-lg" type="submit"><i class="fas fa-sign-in-alt"></i> Sign up</button>
+
+    <a href='/signin'>Already a user? If yes, click here to sign In</a>
+    
+    {{#if message }}
+      <h5 class="alert alert-danger at mt-4">{{message}}</h5 autofocus>
+    {{/if}}
+
+      <p class="mt-5 mb-3 text-muted text-center">©cyberXploit2020</p>
+
+    </form>
+
+  </body>
+  <!-- Font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

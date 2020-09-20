@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>cyberXploit</title>
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section id="title">
+
+
+    <div class="container-fluid">
+
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">cyberXploit</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Products</a>
+            </li>
+            <li class="cart">
+              <a class="nav-link" href="/basket">
+                <ion-icon name="basket"></ion-icon> Basket <span>0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="">Register</a> -->
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="/signin">Sign in</a>
+                  <a class="dropdown-item" href="/signup">Sign up</a>
+                  <form method = "post" action = "/auth/logout">
+                      <!-- <input type="submit" name="" value="" /> -->
+                    <a class="dropdown-item" href="/logout" onclick="deleteItems()">Logout</a>
+                  </form>
+
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-12">
+
+
+            <!-- <h5 class="alert alert-danger at mt-4" onclick="loadDoc()"> </h5 > -->
+            {{#if message }}
+              <h5 class="alert alert-success at mt-4">{{message}} </h5 autofocus>
+            {{/if}}
+
+
+            <!-- <div class="alert alert-success" role="alert">
+  <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+</div> -->
+
+          <h4>Welcome to cyberXploit ! An online cyber security awareness site that helps you understand recent vulnerabilities in web applications and websites. Get started! Find the 5 OWASP vulnerabilities in this website.
+          </h4>
+
+
+
+
+          <button type="button" class="button-learnmore btn btn-dark btn-lg download-button">Learn more <i class="fas fa-info-circle"></i></button>
+        </div>
+
+        <!-- <div class="col-lg-6">
+          <img class="title-image" src="images/iphone.png" alt="iphone-mockup">
+        </div> -->
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="row">
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-bullseye fa-3x"></i>
+        <h3>Usable</h3>
+        <p>Easy to use by anyone.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-star fa-3x"></i>
+        <h3>Relevant</h3>
+        <p>Focus on improving user web security.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-edit fa-3x"></i>
+        <h3>Up to date</h3>
+        <p>Updated vulnerabilities.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">-->
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>I am an IT student, and i now practically understand what those huge terms in Cybersecurity mean.</h2>
+          <img class="testimonial-image" src="/images/dog-img.jpg" alt="dog-profile">
+          <em>James, Accra</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">CyberXploit has really made my life easier!</h2>
+          <img class="testimonial-image" src="/images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+
+      </div>
+      <!--Using Carousel with controls-->
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="press-logo" src="/images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="/images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="/images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="/images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <h2>Get an account and add an item to your basket</h2>
+      <p>Affordable pricing to meet your fashion needs.</p>
+
+    <div class="container">
+
+
+
+      <div class="image">
+        <img src="/images/aliz.jpg" class="img" alt="thsirt1">
+        <h3>Aliz</h3>
+        <h3>Free</h3>
+        <a class="add-cart cart1" href="javascript:void(0)">Add To Cart</a>
+      </div>
+
+      <div class="image">
+        <img src="/images/clem.jpg" class="img" alt="thsirt1">
+        <h3>Clem</h3>
+        <h3>$50.00</h3>
+        <a class="add-cart cart2" href="javascript:void(0)">Add To Cart</a>
+      </div>
+
+      <div class="image">
+        <img src="/images/dids.jpg" class="img" alt="thsirt1">
+        <h3>Dids</h3>
+        <h3>$75.00</h3>
+        <a class="add-cart cart3" href="javascript:void(0)">Add To Cart</a>
+      </div>
+
+      <div class="image">
+        <img src="/images/brock.jpg" class="img" alt="thsirt1">
+        <h3>Brock</h3>
+        <h3>$100.00</h3>
+        <a class="inactive add-cart cart4" href="javascript:void(0)">Unreleased</a>
+      </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- <section id="pricing"> -->
+
+  <!-- <h2>Get an account and add an item to your basket</h2>
+    <p>Affordable pricing to meet your fashion needs.</p> -->
+
+  <!-- <div class="row">
+      <div class="pricing-column col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <img src="/images/aliz.jpeg" class="card-img-top" alt="blue-shoes">
+            <h3 class="spec-names">Aliz</h3>
+          </div>
+          <div class="card-body">
+            <h2>Free</h2>
+            <p>Clear rounded lens</p>
+            <p>Wooden frame</p>
+            <button type="button" class="add-cart basket-button btn btn-lg btn-block btn-outline-dark"><i class="fas fa-shopping-cart"></i> Add to basket</button>
+          </div> -->
+
+  <!-- </div>
+
+      </div> -->
+
+  <!-- <div class=" pricing-column col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <img src="/images/clem.jpeg" class="card-img-top" alt="red-shoes">
+            <h3 class="spec-names">Clem</h3>
+          </div>
+          <div class="card-body">
+            <h2>$50</h2>
+            <p>Clear square lens</p>
+            <p>Plastic frame</p>
+            <button type="button" class="add-cart basket-button btn btn-lg btn-block btn-outline-dark"><i class="fas fa-shopping-cart"></i> Add to basket</button>
+          </div> -->
+
+  <!-- </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <img src="/images/dids.jpeg" class="card-img-top" alt="red-shoes">
+            <h3 class="spec-names">Dids</h3>
+          </div>
+          <div class="card-body">
+            <h2>$75</h2>
+            <p>Pink rounded lens</p>
+            <p>Golden frame</p>
+            <button type="button" class="add-cart basket-button btn btn-lg btn-block btn-outline-dark"> <i class="fas fa-shopping-cart"></i> Add to basket</button>
+          </div> -->
+  <!--
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <img src="/images/brock.jpeg" class="card-img-top" alt="red-shoes">
+            <h3 class="spec-names">Brock</h3>
+          </div>
+          <div class="card-body">
+            <h2>$100</h2>
+            <p>Golden square lens</p>
+            <p>Plastic frame</p>
+            <button type="button" class="add-cart basket-button btn btn-lg btn-block btn-outline-dark" disabled></i><i class="fas fa-lock"></i> Unreleased</button> -->
+  <!-- <i class="fas fa-shopping-cart"> Icon for the add to basket on Brock -->
+  <!-- </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+    <div class="row">
+      <div class="cta-download col-lg-12">
+        <h3 class="download-msg">Find the hidden secret!</h3>
+
+<a href="/secrets">
+        <button type="button" class="dowload-button btn btn-outline-dark btn-lg download-button" >Click Me <i class="fas fa-mouse"></i></button>
+
+</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <div class="bottom-container">
+      <a class="footer-link" href="https://www.linkedin.com/in/richard-quartey/"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a class="footer-link" href="https://www.facebook.com/nkk101"><i class="fab fa-facebook-square fa-2x"></i></a>
+      <a class="footer-link" href="https://twitter.com/RichardQuartey2"><i class="fab fa-twitter fa-2x"></i></a>
+      <a class="footer-link" href="https://richard-quartey.github.io/bio/"><i class="fas fa-link fa-2x"></i></a>
+      <p class="copyright">© 2020 <span class="cyberXploit">cyberXploit.</span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!--Java scripts -->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script type="text/javascript">
+
+
+    // creating the script to add quantities [stored locally on our browser] to our cart************************
+    //new
+    let carts = document.querySelectorAll('.add-cart');
+
+    let products = [{
+        name: 'Aliz',
+        tag: 'aliz',
+        price: 0,
+        inCart: 0
+      },
+      {
+        name: 'Clem',
+        tag: 'clem',
+        price: 50,
+        inCart: 0
+      },
+      {
+        name: 'Dids',
+        tag: 'dids',
+        price: 75,
+        inCart: 0
+      },
+      {
+        name: 'Brock',
+        tag: 'brock',
+        price: 100,
+        inCart: 0
+      }
+
+    ];
+
+
+    for (let i = 0; i < carts.length; i++) {
+      carts[i].addEventListener('click', () => {
+        //to know the exact product we are clicking on so we can increment it
+        cartNumbers(products[i]);
+        totalCost(products[i]);
+      })
+    }
+
+    //checking local storage of cart items if item exists
+    function onLoadCartNumbers() {
+      let productNumbers = localStorage.getItem('cartNumbers');
+
+      if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+      }
+    }
+
+
+    function cartNumbers(product, action) {
+      // console.log("The product clicked is", product);
+      let productNumbers = localStorage.getItem('cartNumbers');
+      //converting from string to number
+      productNumbers = parseInt(productNumbers);
+
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+
+      if (action == "decrease") {
+        localStorage.setItem('cartNumbers',productNumbers - 1);
+        document.querySelector('.cart span').textContent = productNumbers - 1;
+      }else if(productNumbers){
+        localStorage.setItem('cartNumbers',productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+      }else{
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+      }
+      //see if user added an item and if yes add once more upon click add to basket
+      setItems(product);
+    }
+
+    function setItems(product) {
+      //seeing if items in cart already exist or not
+      let cartItems = localStorage.getItem('productsInCart');
+      //changing JSON to javascript
+      cartItems = JSON.parse(cartItems);
+      // console.log("My cartItems are", cartItems);
+
+      //if something already exists in cart it is to be incremented
+      if (cartItems != null) {
+
+        //checking for other items which has never been clicked and not a cartItem
+        if (cartItems[product.tag] == undefined) {
+          cartItems = {
+            ...cartItems,
+            [product.tag]: product
+          }
+        }
+        cartItems[product.tag].inCart += 1;
+      } else {
+        //when button is clicked first time update the incart to 1
+        product.inCart = 1;
+        cartItems = {
+          [product.tag]: product
+        }
+      }
+
+      //passed as a JSON object into the local storage
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    }
+
+    function totalCost(product, action) {
+      // console.log("The product price is", product.price);
+      let cartCost = localStorage.getItem('totalCost');
+
+      console.log("My cartCost is", cartCost);
+      console.log(typeof cartCost);
+
+
+      if (action == "decrease"){
+        cartCost = parseInt(cartCost);
+
+        localStorage.setItem('totalCost', cartCost - product.price);
+      }else if (cartCost != null) {
+        //converting cartCost from string to a number
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);
+      } else {
+        localStorage.setItem("totalCost", product.price);
+      }
+
+    }
+    // Additional scripts for the basket page
+    function displayCart() {
+      let cartItems = localStorage.getItem("productsInCart");
+      cartItems = JSON.parse(cartItems);
+      let productContainer = document.querySelector
+      (".products");
+      let cartCost = localStorage.getItem('totalCost');
+
+      // console.log(cartItems);
+      // items on local storage
+      // console.log(cartItems);
+      if (cartItems && productContainer){
+      //when page is loaded the cart will be empty
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+          productContainer.innerHTML += `
+          <div class = "product">
+          <ion-icon name="close-circle"></ion-icon>
+          <img src = "/images/${item.tag}.jpg">
+          <span class="itemName">${item.name}</span>
+          </div>
+          <div class="price">$${item.price}.00</div>
+          <div class="quantity">
+            <ion-icon class="decrease"
+            name="remove-circle"></ion-icon>
+            <span>${item.inCart}</span>
+            <ion-icon class="increase" name="add-circle"></ion-icon>
+          </div>
+          <div class="total">
+          $${item.inCart  *  item.price}.00
+          `;
+
+        });
+
+          productContainer.innerHTML += `
+        <div class = "basketTotalContainer">
+        <h4 class = "basketTotalTitle"> Basket Total</h4>
+        <h4 class = "basketTotal"> $${cartCost}.00</h4>
+        </div>
+        `;
+
+      }
+        deleteButtons();
+        manageQuantity();
+    }
+
+    // new remove item*********************************
+    function deleteButtons (){
+      let deleteButtons = document.querySelectorAll('.product ion-icon');
+      let productName;
+      let productNumbers = localStorage.getItem('cartNumbers');
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+      let cartCost = localStorage.getItem('totalCost');
+
+      for (let i =0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', () => {
+        productName = deleteButtons[i].parentElement.textContent.trim().toLowerCase().replace(/ /g, '');
+        // console.log(productName);
+        // console.log(cartItems[productName].name + " " + cartItems[productName].inCart);
+        localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart);
+
+        localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].inCart));
+
+        delete cartItems[productName];
+        localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+        displayCart();
+        onLoadCartNumbers();
+
+        });
+      }
+    }
+
+    function manageQuantity(){
+      let decreaseButtons = document.querySelectorAll('.decrease');
+      let increaseButtons = document.querySelectorAll('.increase');
+      let cartItems = localStorage.getItem('productsInCart');
+      let currentQuantity = 0;
+      let currentProduct = "";
+
+      cartItems = JSON.parse(cartItems);
+      console.log(cartItems);
+
+      for(let i = 0; i < decreaseButtons.length; i++){
+        decreaseButtons[i].addEventListener('click', () => {
+        currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
+        console.log(currentQuantity);
+        currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim();
+        console.log(currentProduct);
+
+     if (cartItems[currentProduct].inCart > 1){
+        cartItems[currentProduct].inCart -= 1;
+        cartNumbers(cartItems[currentProduct], "decrease");
+        totalCost(cartItems[currentProduct], "decrease");
+        localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+        displayCart();
+      }
+      });
+      }
+
+      for(let i = 0; i < increaseButtons.length; i++){
+        increaseButtons[i].addEventListener('click', () => {
+          console.log('Increase button');
+          currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
+          console.log(currentQuantity);
+          currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLowerCase().replace(/ /g, '').trim();
+          console.log(currentProduct);
+
+          cartItems[currentProduct].inCart += 1;
+          cartNumbers(cartItems[currentProduct]);
+          totalCost(cartItems[currentProduct]);
+          localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+          displayCart();
+
+        })
+      }
+
+
+    }
+
+    onLoadCartNumbers();
+    displayCart();
+
+    (function() {
+	if (!localStorage.getItem('cookieconsent')) {
+		document.body.innerHTML += '\
+		<div class="cookieconsent" style="position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">\
+			This site uses cookies. By continuing to use this website, you agree to their use. \
+			<a href="#" style="color:#CCCCCC;">I Understand</a>\
+		</div>\
+		';
+		document.querySelector('.cookieconsent a').onclick = function(e) {
+			e.preventDefault();
+			document.querySelector('.cookieconsent').style.display = 'none';
+			localStorage.setItem('cookieconsent', true);
+		};
+	}
+}) ();
+
+
+  // alert(document.name);
+  function deleteItems() {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+    window.localStorage.removeItem('sid');
+
+  }
+
+
+
+  </script>
+</body>
+
+</html>

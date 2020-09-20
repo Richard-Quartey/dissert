@@ -1,0 +1,281 @@
+body {
+  font-family: "Montserrat";
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Things like font size, line height should be applied to specific class and not to html elements like h1, h2 body, p  */
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* h1, h2, h3, h4, h5, h6{
+  font-family: "Montserrat-Bold";
+} */
+h4 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.0rem;
+  line-height: 1.5;
+  /* padding: 50px; */
+  padding-top: 30px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* You may have to change this a tag to something else later */
+a {
+  color: #214c3c;
+  /* color: #000; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  padding: 0px 1%;
+  text-decoration: none;
+}
+
+a:hover {
+  color: silver;
+}
+
+/* new */
+#title {
+  color: #fff;
+  background-image: url("https://images.pexels.com/photos/875862/pexels-photo-875862.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* text-align: center; */
+}
+
+.container-fluid {
+  padding: 1% 5% 4%;
+}
+
+.btn {
+  text-align: left;
+}
+
+.navbar {
+  padding: 0 0 1rem;
+  text-align: left;
+}
+
+.nav-item {
+  padding: 0 0px;
+}
+
+/* new padding top  */
+.nav-link {
+  font-size: 1.0rem;
+  font-family: "Montserrat";
+  padding-bottom: 0rem;
+  padding-top: 1px;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.bottom-container {
+  /* background-color: #EAF6F6; */
+  padding: 50px 0 20px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+/* Media Query Breakpoints for website  responsiveness on different viewports*/
+/* @media (max-width: 1028px) {
+The title text-align: center has already been taken care of separately at the top
+  #title {
+    text-align: center;
+  }
+
+
+  }
+} */
+/* telm0tut css */
+.cart ion-icon {
+  /* vertical-align: middle; */
+  font-size: 15px;
+  padding-right: 3px;
+}
+
+/* CART PAGE */
+.products-container {
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* .products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+} */
+.products-container ion-icon {
+  font-size: 20px;
+  color: #056676;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.product-header {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgrey;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.product-title {
+  width: 45%;
+  font-weight: bold;
+}
+
+.price {
+  width: 15%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.quantity {
+  width: 30%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.total {
+  width: 10%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.product {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.product ion-icon {
+  cursor: pointer;
+  /* margin: 20px; */
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products img {
+  width: 100px;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.basketTotalContainer h4 {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.basketTotalTitle {
+  width: 30%;
+}
+
+.basketTotal {
+  width: 10%;
+}
+
+/* Name of product in basket **********************************/
+.itemName {
+  padding-left: 20%;
+}
+
+/* telmo extras */
+/* . {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+} */
+.cart ion-icon {
+  /* vertical-align: middle; */
+  font-size: 15px;
+  padding-right: 3px;
+}
+
+/* new drop down menu style******************* */
+.dropdown-menu a {
+  /* For styling the links inside the content */
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown-menu a:hover {
+  /* Change the color of the dropdown links when they are hovered on */
+  background-color: lightgray;
+  width: auto;
+}
+
+/* div for products */
+/* .image {
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  /* object-fit: contain; */
+}
+
+/* a .add-cart {
+  position: absolute;
+  width: 100%;
+  background-color: darkgrey;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+  /* padding-bottom: 10px; */
+}
+
+/* .image:hover .cart1,
+  .image:hover .cart2,
+  .image:hover .cart3,
+  .image:hover .cart4 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+  } */
