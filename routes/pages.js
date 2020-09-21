@@ -53,7 +53,7 @@ router.get('/signin', (req, res) => {
 
 router.get('/secrets/file/pages/secret', function(req, res, next) {
   res.render('secret', {
-    message: '🏆Congratulations!!!🏆 You completed the Path Traversal vulnerability task. Path traversal is a security vulnerability that occurs when software uses attacker-controlled input to construct a pathname to a directory or file located outside of the restricted directory. An attacker might be able to read arbitrary files on the target system. Security Misconfigurations can lead to a Path Traversal attack. Security Misconfigurations occur when one fails to implement all the security controls for a server or web application, or implementing the security controls, but doing so with errors ⭐'
+    message: '🏆Congratulations!!!🏆 You completed the Security Misconfiguration leading to Path Traversal vulnerability task. Path traversal is a security vulnerability that occurs when software uses attacker-controlled input to construct a pathname to a directory or file located outside of the restricted directory. An attacker might be able to read arbitrary files on the target system. Security Misconfigurations can lead to a Path Traversal attack. Security Misconfigurations occur when one fails to implement all the security controls for a server or web application, or implementing the security controls, but doing so with errors ⭐⭐⭐⭐⭐'
   })
   // res.send(`
   // <h3>Page Not Found. The requested URL /page.html was not found on this server. For files you can try to target its specific path. If you know the filename append it to the localhost path e.g. http://localhost:3000/filename.ext</h3>
@@ -86,7 +86,7 @@ router.get('/basket', (req, res) => {
 
 router.get('/admin', (req, res) => {
   res.render('admin', {
-    message: '🏆Congratulations!!!🏆 You completed the Broken Access Control task. Access control enforces policies such that normal users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure such as unreleased products of store pages etc, modification or destruction of all data, or performing a business function outside of the limits of the user. Hackers bypass access control checks by modifying the URLs,  or the HTML page, or simply using a custom API attack tool ⭐'
+    message: '🏆Congratulations!!!🏆 You completed the Broken Access Control task. Access control enforces policies such that normal users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure such as unreleased products of store pages etc, modification or destruction of all data, or performing a business function outside of the limits of the user. Hackers bypass access control checks by modifying the URLs,  or the HTML page, or simply using a custom API attack tool ⭐⭐'
   });
 });
 
