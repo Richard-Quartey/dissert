@@ -59,11 +59,12 @@ To do this navigate to the path: [http://localhost:3000/admin] without brackets.
 3. Task 3 - Cross-site Scripting ⭐⭐⭐
 To do this task, you should have completed task 2 (Broken Access Control) and on the admin page. The search box on the admin page
 http://localhost:3000/admin will be needed to perform this task. On the admin page insert the script:
-(([<img src onerror="alert(document.cookies)">])) without three brackets in the search box and hit enter. This injects
+(([<img src onerror="alert(document.cookies)">])) without three brackets in the search box and hit enter.
+Note: Github renders script files on its platform therefore for clarity about this task read the pdf file here: [public/readme.pdf] This injects
 javascript into the page and gets information about cookies(which is basically information about a users session).
  In this case the cookies reveals information about how to authenticate yourself as the admin providing you with
  an email and a password (i.e. email=admin@admin.com  password=admin). This information be used by the user
- to login as the admin.
+ to login as the admin. 
 
 
 4. Task 4 - Broken Authentication ⭐⭐⭐⭐
