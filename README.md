@@ -46,7 +46,7 @@ Note: You should already have Node Js installed. To check whether you have [Node
 ## Usage (How To Guide)
 CyberXploit comprises of 5 major vulnerability tasks. The user is supposed to read this guide before beginning.
 
-1.Task 1 - SQL Injection ⭐
+1. Task 1 - SQL Injection ⭐
 To do this task navigate to the Signin page (i.e. Account -> Signin). Then enter
 [" or ""="] without brackets, in both the Email address and Password fields. This allows you to select all the email addresses and password in the database.
 
