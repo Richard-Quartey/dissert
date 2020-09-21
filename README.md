@@ -8,8 +8,8 @@ on vulnerabilities in web applications and how they occur.
 
 
 
-#### Installation ####
-## Tools
+## Installation
+#### Tools ####
  Github - Used for version control during web application development
 a. First download and extract the web application zip file from Github: [https://github.com/Richard-Quartey/dissert]. You should have a zipped file with name [dissert-master] without brackets in your downloads folder. 
 
@@ -43,7 +43,7 @@ Note: You should already have Node Js installed. To check whether you have [Node
 
 
 
-#### Usage (How To Guide) ####
+## Usage (How To Guide)
 CyberXploit comprises of 5 major vulnerability tasks. The user is supposed to read this guide before
 beginning.
 1.Task 1 - SQL Injection ⭐
@@ -79,5 +79,5 @@ Simply append to the current path: [http://localhost:3000/secrets] , [file/pages
 
 
 
-#### Contributing and License ####
+## Contributing and License
 Application files are accessible to be pulled and recommendations on updates are also welcome.
