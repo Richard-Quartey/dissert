@@ -27,7 +27,7 @@ port [3306] click the [Config] button close to the module to access the [my.ini]
 port to 3306 (i.e. port = 3306). You may also have to set the User Account Settings to [Never Notify Me] for the
 installation duration.
 4. Access the phpMyAdmin MySQL database here: http://localhost/phpmyadmin
-5. When in phpMySQL import SQL file from application folder with name: database -> nodejs-login.sql . Database details as follows
+5. When in phpMySQL create a new database called [nodejs-login.sql] without brackets and import SQL file from application folder : [users.sql]. Database details as follows
 [host: 'localhost', user: 'root', password: '']
 For any installation and configuration issues read this short guide: [https://www.cloudways.com/blog/setup-mysql-database-localhost/]
 
