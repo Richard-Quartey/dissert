@@ -34,7 +34,6 @@ dotenv.config({
 //making sure we start the server with app
 var app = express();
 
-
 //creating the database connection
 const db = mysql.createConnection({
   host: 'localhost',
