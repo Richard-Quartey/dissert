@@ -89,9 +89,9 @@ exports.signin = (req, res) => {
           //we need the JWT_SECRET password and token expiry details to create the token
           const token = jwt.sign({
             id: id
-          }, process.env.JWT_SECRET, {
+          }, "mysupersecretpassword", {
             //Token created and JWT_EXPIRES_IN in 90d should be changed to 10 years
-            expiresIn: process.env.JWT_EXPIRES_IN
+            expiresIn: "90d"
           });
 
           // console.log("The token is: " + token);
@@ -99,7 +99,7 @@ exports.signin = (req, res) => {
           const cookieOptions = {
             expires: new Date(
               //Set up JWT_COOKIE_EXPIRES for how long cookie should last
-              Date.now() + process.env.JWT_COOKIE_EXPIRES * 10 * 24 * 60 * 60 * 1
+              Date.now() + 365 * 10 * 24 * 60 * 60 * 1
             ),
             //making sure that cookie can only be set up in a http only environment to prevent hacking
             // httpOnly: true
@@ -110,7 +110,7 @@ exports.signin = (req, res) => {
           req.session.loggedin = true;
 
           res.status(200).render("admin", {
-            message: '🏆 Congratulations!!!🏆 You completed the Broken Authentication task - Broken authentication are several vulnerabilities that attackers exploit to impersonate legitimate users online. Broadly, broken authentication refers to weaknesses in two areas: session management and credential management⭐',
+            message: '🏆 Congratulations!!!🏆 You completed the Broken Authentication task - Broken authentication are several vulnerabilities that attackers exploit to impersonate legitimate users online. Broadly, broken authentication refers to weaknesses in two areas: session management and credential management. In this scenario the attack was possible due to improper credential management⭐⭐⭐⭐',
             deleted: true
           });
 
@@ -121,9 +121,9 @@ exports.signin = (req, res) => {
           //we need the JWT_SECRET password and token expiry details to create the token
           const token = jwt.sign({
             id: id
-          }, process.env.JWT_SECRET, {
+          }, "mysupersecretpassword", {
             //Token created and JWT_EXPIRES_IN in 90d should be changed to 10 years
-            expiresIn: process.env.JWT_EXPIRES_IN
+            expiresIn: '90d'
           });
 
           // console.log("The token is: " + token);
@@ -131,7 +131,7 @@ exports.signin = (req, res) => {
           const cookieOptions = {
             expires: new Date(
               //Set up JWT_COOKIE_EXPIRES for how long cookie should last
-              Date.now() + process.env.JWT_COOKIE_EXPIRES * 10 * 24 * 60 * 60 * 1
+              Date.now() + 365 * 10 * 24 * 60 * 60 * 1
             ),
             //making sure that cookie can only be set up in a http only environment to prevent hacking
             // httpOnly: true
@@ -153,9 +153,9 @@ exports.signin = (req, res) => {
           //we need the JWT_SECRET password and token expiry details to create the token
           const token = jwt.sign({
             id: id
-          }, process.env.JWT_SECRET, {
+          }, 'mysupersecretpassword', {
             //Token created and JWT_EXPIRES_IN in 90d should be changed to 10 years
-            expiresIn: process.env.JWT_EXPIRES_IN
+            expiresIn: "90d"
           });
 
           console.log("The token is: " + token);
@@ -163,7 +163,7 @@ exports.signin = (req, res) => {
           const cookieOptions = {
             expires: new Date(
               //Set up JWT_COOKIE_EXPIRES for how long cookie should last
-              Date.now() + process.env.JWT_COOKIE_EXPIRES * 10 * 24 * 60 * 60 * 1
+              Date.now() + 365 * 10 * 24 * 60 * 60 * 1
             ),
             //making sure that cookie can only be set up in a http only environment to prevent hacking
             // httpOnly: true
