@@ -15,23 +15,24 @@ a. First download and extract the web application zip file from Github: [https:/
 
 b. XAMPP Control panel - This application was used to connect phpMySQL to the web application as the
 backend database.
-*********Install XAMPP*******
-1. Download and run XAMPP for your operating system. Get latest version of XAMPP here https://www.apachefriends.org/download.html
+*********Install XAMPP - For WINDOWS USERS*******
+1. Download and run XAMPP for your Windows operating system. Get latest version of XAMPP here https://www.apachefriends.org/download.html
 2. Select and install all components. No special configuration needed during installation. Process takes about 10 -15 minutes
 3. Open XAMPP Control Panel and start the Apache and MySQL modules. If MySQL module is not running on port [3306] click the [Config] button close to the module to access the [my.ini] text file and change the port to 3306 (i.e. port = 3306). You may also have to set the User Account Settings to [Never Notify Me] for the
 installation duration.
 4. Access the phpMyAdmin MySQL database here: http://localhost/phpmyadmin
 5. When in phpMySQL first create a new database name [nodejs-login] and then from the IMPORT tab, import SQL file from dowloaded and extracted application folder. By navigating to : [dissert-master -> database -> users.sql] . Note the database details as follows [host: 'localhost', user: 'root', password: '', database: nodejs-login]
 For any installation and configuration issues read this short guide: [https://www.cloudways.com/blog/setup-mysql-database-localhost/]
-
-
+*********Install MAMP - For MAC OS USERS*******
+1. Download and run MAMP for your Mac OS system. Get latest version of MAMP here https://www.mamp.info/en/downloads/
+2. Continue with instructions as in XAMPP 
 
 b.  Node js - The environment for creating Backend server for application
 ********Install Node js*******
 1. Download and install Node Js for your operating system. Get it here: https://nodejs.org/en/
 
 
-c. Hyper Terminal CLI - Command line platform to run the web application server
+c. Hyper Terminal CLI or any other CLI terminal of your choice - Command line platform to run the web application server. You can also use any terminal of your preference.
 *********Install Hyper*******
 1. Download Hyper for your Operating System here. [https://hyper.is/]
 2. Run Hyper
@@ -39,7 +40,7 @@ c. Hyper Terminal CLI - Command line platform to run the web application server
 4. In dissert-master directory run [npm install]  without brackets, to install needed dependencies from package.json file
 5. Subsequently run application server with [node app.js] to run web application
 6. Start web application on localhost in web browser [localhost:3000] without brackets.
-Note: You should already have Node Js installed. To check whether you have [Node Js] installed type into Hyper Terminal [node -v]. This shows you the version of node installed.
+Note: You should already have Node Js installed. To check whether your terminal has [Node Js] installed, type into into Terminal [node -v]. This shows you the version of node installed.
 
 
 
