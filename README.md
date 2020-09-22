@@ -63,7 +63,7 @@ http://localhost:3000/admin will be needed to perform this task. On the admin pa
 Note: Github renders script files on its platform therefore for clarity about this task read the pdf file here: [public/readme.pdf] This injects
 javascript into the page and gets information about cookies(which is basically information about a users session).
  In this case the cookies reveals information about how to authenticate yourself as the admin providing you with
- an email and a password (i.e. email=admin@admin.com  password=admin). This information be used by the user
+ an email and a password (i.e. email=admin@admin.com  password=admin). This information can be used by the user
  to login as the admin. 
 
 
